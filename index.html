@@ -1,524 +1,2064 @@
 <!DOCTYPE html>
 <html lang="in">
 <head>
-    <title>Top Up Game</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>By FLAMID</title>
+    <style>
         body {
-            background:#f1f1f1;
             padding:0;
             margin:0;
-            font-family:arial;
         }
-        html, body {
+        body, html {
             height:100%;
-            }
-    </style>
-    
-</head>
-<body>
-    <style>
-        #list {
+        }
+        #input {
+            border: 2px solid grey;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            color: grey;            
+            transition: 0.6s;
+        }
+        #input:hover {
+            border: 2px solid #00a5df;
+            color: #00a5df;            
+            transition: 0.6s;
+        }
+        #inputt {
+            border: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            padding: 30%;
+            width:340%;
+            position:relative;
+            border-radius: 6px;          
+            transition: 0.2s;
+        }
+        #inputtt {
+            border: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            padding: 22%;
+            width:280%;
+            position:relative;
+            border-radius: 6px;          
+            transition: 0.2s;
+        }
+        #hv {
+            color: grey;
+        }
+        #hv:hover {
+            color: #00a5df;
+        }
+.tab {
+    transition:1s;
+    border-radius:6px;
+    background: #fcfcfc;
+}
+.tab div.active {
+  background-color: white;
+  color:#2a83ff;
+  transition:1s;
+}
+.tabcontent {
+  display: none;  
+}
+.tab li {
+    float:left;
+}
+.ul {
+list-style-type:none;
+margin:0;
+padding:0;
+}
+.li {
+display:block;
+    padding:3%;
+}
+#list {
         background-color:white;
-        box-shadow:0 1px 3px 0 rgba(0,0,0,0.1);
-        border-radius:4px;
+        border: 2px solid #f1f1f1;
+        border-radius:6px;
         width:100%;
         height:auto;
         position:relative;
+        box-shadow:0 1px 1px 1px rgba(0,0,0,0.1);
+        transition: 0.4s;
         }
-.pos li {
-        display:block;
-        padding:3%;
-    }
-    .pos ul {
-        padding:0;
-        margin:0;
-    }
-.box {
-position: relative;
-}
-.box input:focus + label,
-.box input:valid + label,
-.box textarea:focus + label,
-.box textarea:valid + label {
-color: #00a5df;
-top: -13px;
-}
-.box input:focus + label:after,
-.box input:valid + label:after,
-.box textarea:focus + label:after,
-.box textarea:valid + label:after {
-}
-.wrapper label {
-position: absolute;
-top: 19%;
-left: 2%;
-color: grey;
-text-decoration:none;
-background: white;
-width:24%;
-text-align:center;
-transition: 0.3s ease-in-out;
-border-radius: 50px;
-}
-.wrapper a {
-color: grey;
-border-radius: 50px;
-}
-#opi:hover {
-    color:#00a5df;
-}
-.boxx {
-position: relative;
-}
-.boxx input:focus + label,
-.boxx input:valid + label,
-.boxx textarea:focus + label,
-.boxx textarea:valid + label {
-color: #00a5df;
-top: -13px;
-left:36%;
-}
-.piol {
-    color:#00a5df;
-}
-.rig {
-    color:grey;
-}
-.boxx input:focus + label:after,
-.boxx input:valid + label:after,
-.boxx textarea:focus + label:after,
-.boxx textarea:valid + label:after {
-}
-.wrapperx label {
-position: absolute;
-top: 19%;
-left: 1%;
-color: grey;
-text-decoration:none;
-background: white;
-width:22%;
-text-align:center;
-transition: 0.3s ease-in-out;
-border-radius: 50px;
-}
-.wrapperx a {
-color: grey;
-border-radius: 50px;
-}
-.btn-success:hover {
-    border:1px solid grey;
-    color:grey;
-}
-</style>
-    <div style="background-color:#00a5df;width:100%;height:108px;position:relative;">
-        <br/>
-        <br/>
+        #list:hover {
+        transform: rotateZ(16deg);
+        transition: 0.4s;
+        }
+        #table { 
+            position:relative;
+            bottom:20px;
+        }
+        .mq {
+            color: #37474f;
+            overflow: hidden;
+            background: white;
+            border-radius: 20px;
+        }
+        #co {
+        background-color: #37474f;
+        border-radius: 0 0 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: #f1f1f1;">
         
-    <div class="container" style="background:white;height:122%;width:92%;border-radius:4px;box-shadow:0 1px 3px 0 rgba(0,0,0,0.1);position:relative;">
-        <br/>
-        <div class="">
-            <form name="operator">
-<div class="wrapper">
-    <p class="box">
-        <input onkeyup="cek()" id="email" type="keyboard" required="required" name="nomo" class="form-control" value="" placeholder="08xxxx"> 
-        <label for="email"><small>Nama Game</small></label>
-        <span class="fa fa-address-book form-control-feedback" style="color:#00a5df;font-size:160%;"></span>
-    </p>
-</div>
-</div>
-</form>
- <div class="">
-        <div class="wrapperx" style="top:10px;position:relative;">
-    <p class="boxx">
-        <input id="kk" type="button" required="required" name="name" placeholder="cari..." class="form-control" value="" style="color:transparent;"> 
-        <label for="name"  ><small id="kp">Provider</small></label>
-        <span id="rolle" class="glyphicon glyphicon-chevron-right form-control-feedback col-xm-1" style="" ></span>
-    </p>
-</div>
-       </div>
-       <br/>
-</div>
-    </div>
-    </div>
-   <h4 style="color:transparent;">error  709</h4>
-   <h6 style="color:transparent;">error 809</h6>
-        <img src="https://i.ibb.co/9TvDN60/IMG-20210808-105029.jpg" alt="Loading" style="width:100%;">
-
-<br/>
-<br/>
-<div id="pusat">
-    <div class="">
-        <div class="pos">
-            <ul>
-                <li>
-                    <div id="list">
-                      <div class="container">
-                          <h5 >FF 5💎 | Free Fire </h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-5-687686"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 985</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-              
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 12💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-12-687692"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 2.055</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-               
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 50💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-50-687694"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 7.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-               
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 70💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-70-687695"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 9.300</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-                
-                   <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 140💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-140-687698"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 18.300</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-                
-                  <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF MM💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-mm-687726"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 28.200</small> 
-<br/>
-<small style="color:transparent;">error89</small>
-
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-                
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 210💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-210-687699"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 29.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-               
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 355💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-355-687702"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 48.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 500💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-500-687703"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 67.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-
-           <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 720💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-720-687707"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 93.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-     
-
-               
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF MB💎 | Free Fire </h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-mb-687728"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 112.500</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-
-                <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >FF 1440💎 | Free Fire</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ff-1440-687723"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Free Fire</small><br/>
-<small style="color:grey;">Rp 185.000</small> 
-<br/>
-<small style="color:transparent;">error89</small>
-
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-                
-
-
- <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >ML 86💎 | Mobile Legends</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ml-86-687730"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Mobile Legends</small><br/>
-<small style="color:grey;">Rp 19.200</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
- <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >ML 172💎 | Mobile Legends/h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ml-172-687732"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Mobile Legends</small><br/>
-<small style="color:grey;">Rp 38.200</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
- <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >ML 257💎 | Mobile Legends</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ml-257-687734"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Mobile Legends</small><br/>
-<small style="color:grey;">Rp 57.OOO</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
- <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >ML 408💎 | Mobile Legends</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ml-408-687737"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Mobile Legends</small><br/>
-<small style="color:grey;">Rp 106.500</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
- <li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >ML 514💎 | Mobile Legends</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/ml-514-690957"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Mobile Legends</small><br/>
-<small style="color:grey;">Rp 118.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-
-
-
-<li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >higgs domino [1B] 💎</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/higgs-domino-1b-690962"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Higgs Domino</small><br/>
-<small style="color:grey;">Rp 68.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-<li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >Suasage Man 180 💎</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/suasage-man-180-692304"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Suasage Man</small><br/>
-<small style="color:grey;">Rp 46.650</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-<li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >Suasage Man 300 💎</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/suasage-man-300-692309"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Suasage Man</small><br/>
-<small style="color:grey;">Rp 74.750</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-<li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >Suasage Man 680 💎</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/suasage-man-680-692310"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Suasage Man</small><br/>
-<small style="color:grey;">Rp 147.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-<li>
-                <div id="list">
-                      <div class="container">
-                          <h5 >Suasage Man 1280 💎</h5>
-                          <a href="https://tokozs12.tokowebku.com/produk/suasage-man-1280-692313"><button style="float:right;border-color:#00a5df;color:#00a5df;background:none;" class="btn btn-success">Beli</button></a>             
-<small style="color:grey;">Suasage Man</small><br/>
-<small style="color:grey;">Rp 304.000</small> 
-<br/>
-<small style="color:transparent;">error89</small> 
-<small style="color:transparent;">eror67</small>                        
-                      </div>
-                    </div>
-                </li>
-
-
-
-                </ul>
+    
+        <div class="container">
+            
+            <table>
+                <tr>
+                    <td style="width:100%;">
+                        <h5><b id="flam">List</b><small style="float:right;color:#00a5df;position:relative;">Butuh Bantuan ? </small></h5>                    <div id="input">                <div id="1">
+        <small><span style="color:grey;">Select Game </span><span class="glyphicon glyphicon-triangle-bottom" style="float:right;top:6px"></span></small>
         </div>
-    </div>
+        <div style="display:none;" id="2">
+             <div id="">
+        <h6 onclick="teel()" style="color: grey;"><span style="color:grey;">Free Fire </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+
+
+</div>
+        <hr/>
+        <div id=""><h6 onclick="thre()" style="color: grey;"><span style="color:grey;">Mobile Legends </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+        </div>
+        <hr/>
+        <div id=""><h6 onclick="axis()" style="color: grey;"><span style="color:grey;">Sausage </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+        </div>
+        <hr/>
+        <div id=""><h6 onclick="indo()" style="color: grey;"><span style="color:grey;">CODM </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+        </div>
+        <hr/>
+        <div id=""><h6 onclick="xl()" style="color: grey;"><span style="color:grey;">PUBG Mobile </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+        </div>
+        <hr/>
+        <div id=""><h6 onclick="smar()" style="color: grey;"><span style="color:grey;">ROBLOX </span><span class="glyphicon glyphicon-chevron-right" style="float:right;top:4px"></span></h6>
+        </div>
+        </div>     </div>
+                    </td>
+                    <td style="width: 6%;">
+               <div class="">
+                  <h4 id="kk" data-placement="left" title="BY FLAMID CODE" style="position:relative;top:18px;left:35%;color:#00a5df;"><span class="fa fa-gamepad"></span></h4>
+                  </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div class="tab">
+    <ul class="ul" style="width:60%;left:33%;position:relative;">
+        <li class="li">
+  
+  <div id="inputt" class="tablinks" onclick="openc(event, 'oh')" style="float:right;">
+        <small style="left:28%;position:relative;bottom: 6px;" id="dfn"><span><b>TopUp</b></span></small>
+        </div>
+  </li>
+      </li>
+      <li class="li" style="display: none;">
+  
+  <div id="inputtt" class="tablinks" onclick="openc(event, 'flamid')" style="float:left;">
+        <small style="left:28%;position:relative;bottom: 6px;"><span><b><span style="color: transparent;">.</span><span style="color:transparent;"></span> Voucher<span style="color:transparent;"></span></b></span></small>
+        </div>
+  </li>
+  </ul>
 </div>
 <br/>
-<script>
-$(document).ready(function(){
-$("#kk").click(function(){
-    var va =
-$(this).val().toLowerCase();
-$(".pos li").filter(function(){
-$(this).toggle( $(this).text().toLowerCase().indexOf(va) > -1)
-});
-});
-$("#kk").on("click", function(){
-$("#pusat").show(100);
-});
-$("#email").on("keyup", function(){
-$("#rolle").addClass("piol");
-});
-$("#email").on("keyup", function(){
-$("#pusat").hide(100);
-});
-$("#pusat").hide();
-});
-function cek(){
-var x = document.forms["operator"]["nomo"].value;
-if (x == null || x == "" || x < 4)
-{document.getElementById("kk").value="";document.getElementById("kp").innerHTML="Provider";
-} else if(x == ff || x == FF || x == free || x == free fire || x == Free Fire)
-{document.getElementById("kp").innerHTML="Free Fire";document.getElementById("kk").value="Free Fire";
-} else if(x == ML || x == ml || x == mobile legends || x == mobile || x == mo)
-{document.getElementById("kp").innerHTML="Mobile Legends";document.getElementById("kk").value="Mobile Legends";
-} else if(x == PUBG || x == pubg || x == pu || x == pub || x == p )
-{document.getElementById("kp").innerHTML="PUBG";document.getElementById("kk").value="PUBG";
-} else if(x == HIGGS || x == HI || x == DOMINO || x == higgs || x == higgs domino || x == higgsdomino)
-{document.getElementById("kp").innerHTML="HIGGS DOMINO";document.getElementById("kk").value="HIGGS DOMINO";
-} else if(x == Suasage || x == suasageman || x == suasage || x == su || x == sua || x == Suasage Man )
-{document.getElementById("kp").innerHTML="Suasage Man";document.getElementById("kk").value="Suasage Man";
+<br/></div></div>
+<div style="background: white;height:100%;position:relative;width:100%;padding:0;margin:0;position:relative;">
+<div id="oh" class="tabcontent">
+  <br/> 
+  <br/>
+  <div class="container">
+      <table id="table" style="display: none;">
+          <tr id="tel1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20</h3>
+                                </td>
+                                <td>
+                                    <div><small><b>DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><s> Harga Rp15.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+
+
+<small style="color:grey;"><s> Harga Rp20.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 19.500</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              
+          </tr>
+          <tr id="thre1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp15.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="axis1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="7477">
+              <small style="color: transparent;">error7477</small>
+          </td>
+          <tr id="axis2">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+
+
+</tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="thre2">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp15.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>25 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="tel2">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><s> Harga Rp15.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+
+
+</table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="7577">
+              <small style="color: transparent">error7577</small>
+          </td>
+          <tr id="axis3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="tel3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="thre3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>40 </h3>
+                                </td>
+
+
+<td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>45 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="indos1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="7177">
+              <small style="color: transparent;">error7177</small>
+          </td>
+          <tr id="indos2">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+
+
+<h3>25 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="7677">
+              <small style="color: transparent;">error7677</small>
+          </td>          
+          <tr id="indos3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+<tr id="xl1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>8 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td>
+              <small id="7744" style="color: transparent;">error7744</small>
+          </td>
+          <tr id="xl2">
+
+
+<td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>25 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="7877">
+              <small style="color: transparent;">error7877</small>
+          </td>
+          <tr id="xl3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td>
+              <small id="700" style="color: transparent;">error700</small>
+          </td>
+          <tr id="sa1">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+
+
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>22 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="780">
+              <small style="color: transparent;">error780</small>
+          </td>
+          <tr id="sa2">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>45 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="782">
+              <small style="color: transparent;">error782</small>
+          </td>
+          <tr id="sa3">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp16.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> DM</b></small></div></td>
+                            </tr>
+
+
+</table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><s> Harga Rp22.000 </s></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+      </table>
+  </div>
+</div>
+<div id="flamid" class="tabcontent">
+ <br/>    
+ <br/>
+   <div class="container">
+     <table id="table2" style="display: none;">
+          <tr id="tel11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20</h3>
+                                </td>
+                                <td>
+                                    <div><small><b>RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 19.500</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              
+          </tr>
+          <tr id="thre11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="axis11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+
+
+<td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="747">
+              <small style="color: transparent;">error747</small>
+          </td>
+          <tr id="axis22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="thre22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+
+
+<table>
+                            <tr>
+                                <td>
+                                    <h3>25 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="tel22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="757">
+              <small style="color: transparent">error757</small>
+          </td>
+          <tr id="axis33">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Sausage</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="tel33">
+
+
+<td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Free Fire</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="thre33">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>40 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>45 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">Mobile Legends</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <tr id="indos11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+
+
+<div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="717">
+              <small style="color: transparent;">error717</small>
+          </td>
+          <tr id="indos22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>25 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="767">
+              <small style="color: transparent;">error767</small>
+          </td>          
+          <tr id="indos33">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">CODM</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+
+
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+<tr id="xl11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>8 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>15 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td>
+              <small id="774" style="color: transparent;">error774</small>
+          </td>
+          <tr id="xl22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>25 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="787">
+              <small style="color: transparent;">error787</small>
+          </td>
+          <tr id="xl33">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>35 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+
+
+</tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">PUBG Mobile</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td>
+              <small id="70" style="color: transparent;">error70</small>
+          </td>
+          <tr id="sa11">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>20 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>22 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="780">
+              <small style="color: transparent;">error780</small>
+          </td>
+          <tr id="sa22">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>45 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+
+
+<h3>30 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+          <td id="782">
+              <small style="color: transparent;">error782</small>
+          </td>
+          <tr id="sa33">
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>5 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 14.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+              <td class="container">
+                  <div id="list">
+                      <div class="container">
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>10 </h3>
+                                </td>
+                                <td><div><small><b> RB</b></small></div></td>
+                            </tr>
+                        </table>
+                          <small style="color:grey;">ROBLOX</small><br/>
+<small style="color:grey;"><span> Voucher </span></small><br/>
+<small style="color: #00a5df;"><b>Harga Rp 20.000</b></small> 
+<br/><br/>
+                      </div>
+                    </div>
+              </td>
+          </tr>
+      </table>
+</div>
+</div>
+    </div>
+    <script>
+        function openc(ok, flamname) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(flamname).style.display = "block";
+  ok.currentTarget.className += " active";
 }
-console.log("Powered By FLAM id");
-console.info("Telegram UserName = FLAMid");
-</script>
+var tab = document.getElementById("table");
+var tab2 = document.getElementById("table2");
+document.getElementById("dfn").click();
+var axis3 = document.getElementById("axis3");
+var thre3 = document.getElementById("thre3");
+var tel3 = document.getElementById("tel3");
+var tel1 = document.getElementById("tel1");
+var thre1 = document.getElementById("thre1");
+var axis1 = document.getElementById("axis1");
+var axis2 = document.getElementById("axis2");
+var tel2 = document.getElementById("tel2");
+var indos1 = document.getElementById("indos1");
+var indos2 = document.getElementById("indos2");
+var thre2 = document.getElementById("thre2");
+var sa1 = document.getElementById("sa1");
+var sa2 = document.getElementById("sa2");
+var sa3 = document.getElementById("sa3");
+var indos3 = document.getElementById("indos3");
+var xl1 = document.getElementById("xl1");
+var xl2 = document.getElementById("xl2");
+var xl3 = document.getElementById("xl3");
+var filter = document.getElementById("flam");
+var axis33 = document.getElementById("axis33");
+var thre33 = document.getElementById("thre33");
+var tel33 = document.getElementById("tel33");
+
+
+var tel11 = document.getElementById("tel11");
+var thre11 = document.getElementById("thre11");
+var axis11 = document.getElementById("axis11");
+var axis22 = document.getElementById("axis22");
+var tel22 = document.getElementById("tel22");
+var indos11 = document.getElementById("indos11");
+var indos22 = document.getElementById("indos22");
+var thre22 = document.getElementById("thre22");
+var sa11 = document.getElementById("sa11");
+var sa22 = document.getElementById("sa22");
+var sa33 = document.getElementById("sa33");
+var indos33 = document.getElementById("indos33");
+var xl11 = document.getElementById("xl11");
+var xl22 = document.getElementById("xl22");
+var xl33 = document.getElementById("xl33");
+function teel() {
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="none";
+document.getElementById("787").style.display="none";
+tab.style.display="block";
+tab2.style.display="block";
+thre1.style.display="none";
+sa1.style.display="none";
+sa2.style.display="none";
+sa3.style.display="none";
+thre2.style.display="none";
+indos3.style.display="none";
+document.getElementById("757").style.display="block";
+document.getElementById("747").style.display="block";
+document.getElementById("767").style.display="none";
+document.getElementById("717").style.display="none";
+tel1.style.display="block";
+tel2.style.display="block";
+axis2.style.display="none";
+tel3.style.display="block";
+indos2.style.display="none";
+indos1.style.display="none";
+thre3.style.display="none";
+xl1.style.display="none";
+xl2.style.display="none";
+xl3.style.display="none";
+axis1.style.display="none";
+axis3.style.display="none";
+
+
+thre11.style.display="none";
+sa11.style.display="none";
+sa22.style.display="none";
+sa33.style.display="none";
+thre22.style.display="none";
+indos33.style.display="none";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="none";
+document.getElementById("7877").style.display="none";
+document.getElementById("7577").style.display="block";
+document.getElementById("7477").style.display="block";
+document.getElementById("7677").style.display="none";
+document.getElementById("7177").style.display="none";
+tel11.style.display="block";
+tel22.style.display="block";
+axis22.style.display="none";
+tel33.style.display="block";
+indos22.style.display="none";
+indos11.style.display="none";
+thre33.style.display="none";
+xl11.style.display="none";
+xl22.style.display="none";
+xl33.style.display="none";
+axis11.style.display="none";
+axis33.style.display="none";
+filter.innerHTML=" Free Fire ";
+}
+function thre() {
+tab2.style.display="block";
+thre11.style.display="block";
+sa11.style.display="none";
+sa22.style.display="none";
+sa33.style.display="none";
+thre22.style.display="block";
+indos33.style.display="none";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="none";
+document.getElementById("7877").style.display="none";
+document.getElementById("7577").style.display="block";
+document.getElementById("7477").style.display="block";
+document.getElementById("7677").style.display="none";
+document.getElementById("7177").style.display="none";
+tel11.style.display="none";
+tel22.style.display="none";
+axis22.style.display="none";
+tel33.style.display="none";
+indos22.style.display="none";
+indos11.style.display="none";
+thre33.style.display="block";
+xl11.style.display="none";
+xl22.style.display="none";
+xl33.style.display="none";
+axis11.style.display="none";
+axis33.style.display="none";
+
+
+sa1.style.display="none";
+sa2.style.display="none";
+sa3.style.display="none"; document.getElementById("757").style.display="block";
+document.getElementById("747").style.display="block";
+document.getElementById("767").style.display="none";
+document.getElementById("717").style.display="none";
+indos3.style.display="none";
+
+
+tel2.style.display="none";
+tel3.style.display="none";
+thre3.style.display="block";
+tab.style.display="block";
+tel1.style.display="none";
+axis3.style.display="none";
+thre1.style.display="block";
+axis1.style.display="none";
+axis2.style.display="none";
+thre2.style.display="block";
+indos1.style.display="none";
+xl1.style.display="none";
+xl2.style.display="none";
+xl3.style.display="none";
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="none";
+document.getElementById("787").style.display="none";
+indos2.style.display="none";
+filter.innerHTML="Mobile Legends";
+}
+function axis() {
+tab2.style.display="block";
+thre11.style.display="none";
+sa11.style.display="none";
+sa22.style.display="none";
+sa33.style.display="none";
+thre22.style.display="none";
+indos33.style.display="none";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="none";
+document.getElementById("7877").style.display="none";
+document.getElementById("7577").style.display="block";
+document.getElementById("7477").style.display="block";
+document.getElementById("7677").style.display="none";
+document.getElementById("7177").style.display="none";
+tel11.style.display="none";
+tel22.style.display="none";
+axis22.style.display="block";
+tel33.style.display="none";
+indos22.style.display="none";
+indos11.style.display="none";
+thre33.style.display="none";
+xl11.style.display="none";
+xl22.style.display="none";
+xl33.style.display="none";
+axis11.style.display="block";
+axis33.style.display="block";
+
+
+sa1.style.display="none";
+sa2.style.display="none";
+sa3.style.display="none";
+document.getElementById("767").style.display="none";
+document.getElementById("717").style.display="none";
+document.getElementById("757").style.display="block";
+document.getElementById("747").style.display="block";
+tab.style.display="block";
+axis3.style.display="block";
+indos3.style.display="none";
+thre3.style.display="none";
+tel1.style.display="none";
+tel3.style.display="none";
+thre1.style.display="none";
+tel2.style.display="none";
+axis1.style.display="block";
+indos2.style.display="none";
+xl1.style.display="none";
+xl2.style.display="none";
+xl3.style.display="none";
+thre2.style.display="none";
+axis2.style.display="block";
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="none";
+document.getElementById("787").style.display="none";
+indos1.style.display="none";
+filter.innerHTML="Sausage";
+}
+function indo() {
+tab2.style.display="block";
+thre11.style.display="none";
+sa11.style.display="none";
+sa22.style.display="none";
+sa33.style.display="none";
+thre22.style.display="none";
+indos33.style.display="block";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="none";
+document.getElementById("7877").style.display="none";
+document.getElementById("7577").style.display="none";
+document.getElementById("7477").style.display="none";
+document.getElementById("7677").style.display="block";
+document.getElementById("7177").style.display="block";
+tel11.style.display="none";
+tel22.style.display="none";
+axis22.style.display="none";
+tel33.style.display="none";
+indos22.style.display="block";
+indos11.style.display="block";
+thre33.style.display="none";
+xl11.style.display="none";
+xl22.style.display="none";
+xl33.style.display="none";
+axis11.style.display="none";
+axis33.style.display="none";
+
+
+sa1.style.display="none";
+sa2.style.display="none";
+sa3.style.display="none";
+document.getElementById("767").style.display="block";
+document.getElementById("717").style.display="block";
+axis3.style.display="none";
+document.getElementById("757").style.display="none";
+document.getElementById("747").style.display="none";
+thre3.style.display="none";
+tel1.style.display="none";
+indos3.style.display="block";
+
+
+tel3.style.display="none";
+xl1.style.display="none";
+xl2.style.display="none";
+xl3.style.display="none";
+thre1.style.display="none";
+tel2.style.display="none";
+axis1.style.display="none";
+thre2.style.display="none";
+axis2.style.display="none";
+indos1.style.display="block";
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="none";
+document.getElementById("787").style.display="none";
+indos2.style.display="block";
+tab.style.display="block";
+filter.innerHTML="CODM";
+}
+function xl() {
+tab2.style.display="block";
+thre11.style.display="none";
+sa11.style.display="none";
+sa22.style.display="none";
+sa33.style.display="none";
+thre22.style.display="none";
+indos33.style.display="none";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="block";
+document.getElementById("7877").style.display="block";
+document.getElementById("7577").style.display="none";
+document.getElementById("7477").style.display="none";
+document.getElementById("7677").style.display="none";
+document.getElementById("7177").style.display="none";
+tel11.style.display="none";
+tel22.style.display="none";
+axis22.style.display="none";
+tel33.style.display="none";
+indos22.style.display="none";
+indos11.style.display="none";
+thre33.style.display="none";
+xl11.style.display="block";
+xl22.style.display="block";
+xl33.style.display="block";
+axis11.style.display="none";
+axis33.style.display="none";
+
+
+sa1.style.display="none";
+sa2.style.display="none";
+sa3.style.display="none";
+document.getElementById("767").style.display="none";
+document.getElementById("717").style.display="none";
+axis3.style.display="none";
+thre3.style.display="none";
+document.getElementById("757").style.display="none";
+document.getElementById("747").style.display="none";
+tel1.style.display="none";
+indos3.style.display="none";
+tel3.style.display="none";
+thre1.style.display="none";
+tel2.style.display="none";
+axis1.style.display="none";
+xl1.style.display="block";
+thre2.style.display="none";
+xl2.style.display="block";
+axis2.style.display="none";
+xl3.style.display="block";
+indos1.style.display="none";
+indos2.style.display="none";
+tab.style.display="block";
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="block";
+document.getElementById("787").style.display="block";
+filter.innerHTML="PUBG Mobile";
+}
+function smar() {
+tab2.style.display="block";
+thre11.style.display="none";
+sa11.style.display="block";
+sa22.style.display="block";
+sa33.style.display="block";
+thre22.style.display="none";
+indos33.style.display="none";
+document.getElementById("700").style.display="none";
+document.getElementById("7744").style.display="none";
+document.getElementById("7877").style.display="none";
+document.getElementById("7577").style.display="none";
+document.getElementById("7477").style.display="none";
+document.getElementById("7677").style.display="none";
+document.getElementById("7177").style.display="none";
+tel11.style.display="none";
+tel22.style.display="none";
+axis22.style.display="none";
+tel33.style.display="none";
+indos22.style.display="none";
+indos11.style.display="none";
+thre33.style.display="none";
+xl11.style.display="none";
+xl22.style.display="none";
+xl33.style.display="none";
+axis11.style.display="none";
+axis33.style.display="none";
+
+
+sa1.style.display="block";
+sa2.style.display="block";
+sa3.style.display="block";
+document.getElementById("767").style.display="none";
+document.getElementById("717").style.display="none";
+axis3.style.display="none";
+thre3.style.display="none";
+document.getElementById("757").style.display="none";
+document.getElementById("747").style.display="none";
+document.getElementById("70").style.display="none";
+document.getElementById("774").style.display="none";
+document.getElementById("787").style.display="none";
+
+
+tel1.style.display="none";
+indos3.style.display="none";
+tel3.style.display="none";
+thre1.style.display="none";
+tel2.style.display="none";
+axis1.style.display="none";
+xl1.style.display="none";
+thre2.style.display="none";
+xl2.style.display="none";
+axis2.style.display="none";
+xl3.style.display="none";
+indos1.style.display="none";
+indos2.style.display="none";
+tab.style.display="block";
+filter.innerHTML="ROBLOX";
+}
+        $(function(){
+        $("#input").click(function(){
+        $("#1").slideToggle(100);
+        $("#2").slideToggle(100);
+        });
+        $(".mq").tooltip();
+        $("#kk").tooltip();
+        });
+        console.log("POWERED BY FLAMID CODE");
+        console.warn("BY FLAMID CODE");
+        console.info("BY FLAMID CODE");
+    </script>
 </body>
 </html>
